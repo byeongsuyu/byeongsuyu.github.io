@@ -1,46 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-   
+<html><head><title>Byeongsu Yu</title>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta http-Equiv="Cache-Control" Content="no-cache" />
+<meta http-Equiv="Pragma" Content="no-cache" />
+<meta http-Equiv="Expires" Content="0" /> 
 
-<!-- This is a comment. Remove this line. -->
-<!-- Be sure to change the TITLE line below. -->
-<title>Byeongsu Yu</title>
+<link href="_css/main.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="_js/quotes.js"></script>
+
+<script type="text/javascript" src="http://use.typekit.net/hzk6omf.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+  function loadcourse(){
+    var course = window.top.location.hash.substr(1);  
+    var site = "about.html";
+    document.getElementById('ifram').setAttribute('src', site);
+  }
+</script>
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+</script>
 </head>
 
 <body>
+<div class="outerframe">
+  <div class="menuframe">
+    <div class="name">
+      <a href="index.html" class="name"> 
+      Byeongsu Yu <!--<button onclick="loadcourse()">Click me</button> -->
+      </a>
+    </div>
+    <div class="menumainlinkframe">
+      <a href="research.html" class="menumainlink" target="iframe_main">Research</a><br>
+      <a href="teaching.html" class="menumainlink" target="iframe_main">Teaching</a><br>
+      <a href="travel.html" class="menumainlink" target="iframe_main">Travel</a><br>
+      <a href="notes.html" class="menumainlink" target="iframe_main">Notes</a> <br>
+      <a href="./_pdf/CV_Byeongsu.pdf" class="menumainlink">CV</a> 
+    </div>
+    <div class="externallinkframe">
+      <a href="http://www.math.tamu.edu" class="externallinkframe">Mathematics Department</a><br>
+      <a href="/Calendar" class="externallinkframe">Departmental Calendar</a><br>
+      <a href="/seminars/algebra_combinatorics/" class="externallinkframe">Algebra &amp; Combinatorics Seminar</a><br>
+      <a href="/seminars/geometry" class="externallinkframe">Geometry Seminar</a><br>
+    </div>
+  </div>
+  <div class="right_contact">
+    <div class="titlesmall"> <!--style="padding-top: 9px;"-->
+      Contact
+    </div>
+    <div class="contact">
+      Department of Mathematics<br>
+      Texas A&amp;M University<br>
+      College Station, TX 77843-3368<br>
+      U.S.A.<br>
+      <div style="padding-top: 8px;">Blocker Building, Room 506B<br></div>
+      <div style="padding-top: 0px;">byeongsu &laquo;dot&raquo; yu &laquo;at&raquo; tamu.edu</div>
+    </div>
+  </div>
+</div>
+<div class = "mainbody">
+  <hr />
+  <iframe id="ifram" name="iframe_main" style="border:none;" width="95%" scrolling="no" onload="resizeIframe(this)"></iframe> 
+</div> 
+<script  type="text/javascript">
+  window.onload = loadcourse();
+</script>
+</body></html>
 
-<center><h2>Byeongsu Yu</h2>
-</center>
-
-<p><b><a href="https://byeongsuyu.github.io/notes.html">Notes</a></b></p>
-
-<p><b>Office:</b> Blocker 219E<br />
-<b>E-mail:</b> byeongsu [dot] yu [AT] math [dot] tamu [dot] edu
-</p>
-
-<ul>
-<li>AMS</li>
-<li>MAA</li>
-</ul>
-
-<!-- ========== HTML Validator - You may remove this section ========= -->
-<p style="text-align:center">
-<a href="http://validator.w3.org/check?uri=referer"><img
-   src="http://www.w3.org/Icons/valid-xhtml11"
-   alt="Valid XHTML 1.1" height="31" width="88" /></a>
-<a href="http://jigsaw.w3.org/css-validator/check/referer"><img
-   style="border:0;width:88px;height:31px"
-   src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-   alt="Valid CSS!"/></a>
-</p>
-
-
-<!-- BEGIN CUT ZONE. Delete all lines down to END CUT ZONE -->
-<!-- END CUT ZONE -->
-
-<!-- Keep the next 2 lines -->
-
-</body>
-</html>
