@@ -1,0 +1,98 @@
+body { -webkit-text-size-adjust:100% }
+.outerframe { margin-top:min(5vw,45px);margin-left:min(2vw,30px);padding-bottom:min(5vw,100px);width:100vw;font-size:15px;font-weight:400;line-height:119%;color:#101010;font-family:arial }
+.menuframe { float:left;padding-bottom:min(2vw,30px); }
+.iframepage {font-family:arial}
+
+.name { margin-bottom:15px;width:min(60vw,200px); }
+a.name { font-weight:700;font-size:110%;text-decoration:none;color:#101010 }
+a.name:hover { text-decoration:none }
+
+a { color:#888888 }
+
+.menumainlinkframe { float:left;margin-top:0px;line-height:;width:min(40vw,135px);left:0px;font-size:;color:#bb0000 }
+a.menumainlink { text-decoration:none;font-size:95%;font-weight:700;color:#bb0000 }
+a.menumainlink:hover { text-decoration: underline }
+
+.externallinkframe { float:left;margin-top:0px;width:min(50vw,230px)}
+a.externallinkframe { text-decoration:none;font-size:95%;color:#888888 }
+a.externallinkframe:hover { text-decoration:underline }
+
+.right_contact { float:left;margin-top:0px;width:min(56vw,380px) }
+a.right_contact { text-decoration:none;font-size:95%;color:#888888 }
+a.right_contact:hover { text-decoration: underline }
+
+.titlesmall { position:;top:0px;left:0px;font-style:;font-size:100%;font-weight:700;color:#111111;padding-bottom:0px }
+.titlelarge { position:;top:0px;left:0px;font-style:;font-size:120%;font-weight:400;color:#111111;padding-bottom:23px }
+.titlesubtext { font-size:;font-weight:400;font-size:95%;color:#666666 }
+
+a.boldlink { font-weight:700;color:#111111;text-decoration:none }
+a.boldlink:hover { color:#888888 }
+
+.contact { color:#707070;font-size:95%;padding-bottom:30px }
+
+.mainbody { clear:left;margin-left:min(2vw,25px);width:min(100vw,680px);border-top:0px solid #cccccc;font-weight:400;color:#292929;padding-bottom:0px }
+.textframe { line-height:;position:;top:5px;padding-bottom:50px;left:200px;font-weight:400;color:#292929 }
+.textframeintro { line-height:;position:;top:5px;padding-bottom:23px;left:200px;font-weight:400;color:#292929 }
+.listing { line-height:20px;padding-bottom:11px;color:;font-style:}
+.paper { color:#444444;padding-bottom:12px }
+.date { font-weight:400;color:#999999  }
+a.textlink { text-decoration:none; border-bottom: 1px dotted #bbbbbb;font-size:100%;font-weight:400;font-style:normal;color:#101010 }
+a.textlink:hover { text-decoration: none; color:; border-bottom: 1px solid #444444;}
+.nolink { font-weight:400;font-style:normal;color:#101010 }
+  
+.paper { font-weight:400;color:#888888;padding-bottom:10px }
+.papertitle { font-weight:400;color:#303030 }
+a.paperlink { color:#888888;border-bottom:0px dotted;text-decoration:none }
+a.paperlink:hover { text-decoration:none;color:#252525 }
+a.coauthor { color:#888888;text-decoration:none;border-bottom:1px dotted #bbbbbb}
+a.coauthor:hover { text-decoration:none;color:#252525 }
+
+.table { padding-bottom:15px;padding-top:0px;border-spacing: 0px 0px;font-size:100% }
+.tabletextframe { position:;top:15px;left:0px;font-size:100%;font-weight:400;color:#353535;padding-top:5px }
+.tabletitlesmall { font-style:;font-size:100%;font-weight:400;color:#111111;padding-top:3px }
+.tabletitlelarge { font-style:;font-size:120%;font-weight:400;color:#111111;padding-bottom:15px;padding-top:2px }
+
+.innertable { font-weight:400;color:#303030;padding-top:0px;font-size:100%;width:min(100vw,680px); }
+.term { width:min(13vw,90px);padding-right:10px;font-size:100%;color:#888888;font-style:italic }
+.coursenumber { font-size:100%;font-weight:400; width:min(13vw,90px);color:#303030;padding-right:10px }
+.role { width:min(15vw,100px);padding-right:10px;font-size:100%;color:#888888;font-style:italic }
+.week { width:min(11vw,70px);padding-right:15px;font-size:100%;color:#303030 }
+.date { width:min(13vw,90px);padding-right:15px;font-size:100%;color:#888888;font-style:italic }
+.section { width:min(33vw,220px);padding-right:15px;font-size:100%;color:#303030 }
+.conference { font-size:100%;font-weight:400; width:min(39vw,265px);color:#303030;padding-right:10px }
+.location { font-size:100%;font-weight:400; width:min(40vw,300px);color:#303030 }
+.courses { text-decoration:none; width:min(40vw,300px);overflow:visible; }
+a.conference { color:#303030;text-decoration:none }
+a.conference:hover { text-decoration:underline }
+td { vertical-align:top }
+/*table.conference td { font-size:100%;font-weight:400; width:100px;color:#303030;padding-right:10px }
+table.date td { width:100px;padding-right:15px;font-size:100%;color:#888888;font-style:italic }
+table.location td { font-size:100%;font-weight:400; width:265px;color:#303030 }*/
+
+.cw { padding-bottom:10px;font-size:;color:#666666 }
+.cwyear { color:#111111;font-weight:700 }
+a.cwlink { color:#666666;text-decoration:none }
+a.cwlink:hover { text-decoration:underline }
+a.subtext { text-decoration:none;font-style:;font-weight:400;font-size:95%;color:#777777 }
+a.subtext:hover { text-decoration:underline }
+
+.yearframe { margin-bottom: 20px }
+.year { margin-bottom:10px;font-weight:700;font-size:115%;color:#101010 }
+
+.archive { font-size:95%;color:#888888 }
+a.archivelink { text-decoration:none;font-size:95%;color:#888888 }
+a.menulink1:hover { text-decoration:underline }
+
+.pages { color:#101010;font-weight: 400; line-height: 18px; text-align: left; }
+a.pages { text-decoration: none }
+a.pages:hover { color: #929292; }
+
+.date2 { font-weight:400;color:#888888;font-style:;padding-top:2px }
+a.cv { text-decoration:none; border-bottom: 1px dotted #666666;font-size:100%;font-weight:400;color:#a00000 }
+a.cv:hover { text-decoration: none; color:; border-bottom: 1px solid #a00000;}
+
+a.booklink { text-decoration:none; border-bottom: 0px dotted #bbbbbb;font-size:100%;font-weight:400;font-style:normal;color:#101010 }
+a.booklink:hover { text-decoration: none; color:#888888; border-bottom: 0px solid #444444;}
+
+.textquote { clear:both;float:left;margin-left:0px;width:200px;font-weight:400;font-size:85%;font-style:italic;color:#444444;padding-bottom:30px }
+.textfooter { clear:both;float:left;margin-left:225px;width:680px;font-weight:400;font-size:95%;color:#888888;padding-bottom:30px }
