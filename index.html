@@ -1,72 +1,83 @@
-<!DOCTYPE html>
-<html><head><title>Byeongsu Yu</title>
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
-<meta http-Equiv="Cache-Control" Content="no-cache" />
-<meta http-Equiv="Pragma" Content="no-cache" />
-<meta http-Equiv="Expires" Content="0" /> 
-
-<link href="./_css/main.css" rel="stylesheet" type="text/css">
-
-<script type="text/javascript" src="_js/quotes.js"></script>
-
-<script type="text/javascript" src="http://use.typekit.net/hzk6omf.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-<script type="text/javascript">
-  function loadcourse(){
-    var course = window.top.location.hash.substr(1);  
-    var site = "about.html";
-    document.getElementById('ifram').setAttribute('src', site);
-  }
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Byeongsu Yu</title>
+<meta name="description" content="Byeongsu Yu — Strategic thinker with a PhD in Mathematics. Writing at A Better Question, plus papers, lecture notes, and course pages from graduate school.">
+<link rel="canonical" href="https://byeongsuyu.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Byeongsu Yu">
+<meta property="og:title" content="Byeongsu Yu">
+<meta property="og:description" content="Strategic thinker with a PhD in Mathematics. Writing at A Better Question, plus an academic archive of papers, notes, and course materials.">
+<meta property="og:url" content="https://byeongsuyu.github.io/">
+<meta property="og:image" content="https://byeongsuyu.github.io/_img/og-home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Byeongsu Yu — Strategic Thinker with PhD in Mathematics">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Byeongsu Yu",
+  "url": "https://byeongsuyu.github.io/",
+  "description": "Strategic Thinker with PhD in Mathematics",
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Texas A&M University"},
+  "sameAs": ["https://www.linkedin.com/in/byeongsu-yu/", "https://github.com/byeongsuyu"]
+}
 </script>
-<script>
-  function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-  }
-</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="stylesheet" href="/_css/main.css">
+<script src="/_js/latest-posts.js" defer></script>
 </head>
-
 <body>
-<div class="outerframe">
-  <div class="menuframe">
-    <div class="name">
-      <a href="index.html" class="name"> 
-      Byeongsu Yu <!--<button onclick="loadcourse()">Click me</button> -->
-      </a>
-    </div>
-    <div class="menumainlinkframe">
-      <a href="research.html" class="menumainlink" target="iframe_main">Research</a><br>
-      <a href="teaching.html" class="menumainlink" target="iframe_main">Teaching</a><br>
-      <a href="travel.html" class="menumainlink" target="iframe_main">Travel</a><br>
-      <a href="notes.html" class="menumainlink" target="iframe_main">Notes</a> <br>
-      <a href="./_pdf/CV_Byeongsu.pdf" class="menumainlink">CV</a> 
-    </div>
-    <div class="externallinkframe">
-      <a href="http://www.math.tamu.edu" class="externallinkframe">Mathematics Department</a><br>
-      <a href="/Calendar" class="externallinkframe">Departmental Calendar</a><br>
-      <a href="/seminars/algebra_combinatorics/" class="externallinkframe">Algebra &amp; Combinatorics Seminar</a><br>
-      <a href="/seminars/geometry" class="externallinkframe">Geometry Seminar</a><br>
-    </div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-identity">
+    <a class="brand" href="/" aria-current="page">Byeongsu Yu</a>
+    <p class="site-tagline">Strategic Thinker with PhD in Mathematics</p>
   </div>
-  <div class="right_contact">
-    <div class="titlesmall"> <!--style="padding-top: 9px;"-->
-      Contact
-    </div>
-    <div class="contact">
-      Department of Mathematics<br>
-      Texas A&amp;M University<br>
-      College Station, TX 77843-3368<br>
-      U.S.A.<br>
-      <div style="padding-top: 8px;">Blocker Building, Room 506B<br></div>
-      <div style="padding-top: 0px;">byeongsu &laquo;dot&raquo; yu &laquo;at&raquo; tamu.edu</div>
-    </div>
-  </div>
-</div>
-<div class = "mainbody">
-  <hr />
-  <iframe id="ifram" name="iframe_main" style="border:none;" width="95%" scrolling="no" onload="resizeIframe(this)"></iframe> 
-</div> 
-<script  type="text/javascript">
-  window.onload = loadcourse();
-</script>
-</body></html>
+  <nav class="site-nav" aria-label="Main">
+    <span class="nav-blog"><a href="/blog/">Blog</a><span class="lang-switch"><a href="/blog/ko/" hreflang="ko" aria-label="Blog in Korean">KR</a><a href="/blog/en/" hreflang="en" aria-label="Blog in English">EN</a></span></span>
+    <a href="/academic.html">Academic</a>
+  </nav>
+</header>
+<main id="main">
+  <h1 class="visually-hidden">Byeongsu Yu</h1>
 
+  <section class="intro">
+    <p>I’m a strategic thinker with a PhD in Mathematics and an undergraduate triple major in business, mathematics, and philosophy. I bridge quantitative rigor and human insight, building systems and strategies informed by math and shaped by code, from scalable AI infrastructure to multi-agent workflows. I’m drawn to the elegance of structure, whether in abstract algebra or in complex human systems, and I thrive on questions that don’t fit neatly into a single domain.</p>
+    <p>This site brings together <a href="/blog/"><i>A Better Question</i></a>, my blog in Korean and English, and an <a href="/academic.html">academic archive</a> of the papers, notes, and course materials from my Ph.D. years.</p>
+    <p class="profile-link"><a href="https://www.linkedin.com/in/byeongsu-yu/" rel="me">Full profile on LinkedIn&nbsp;↗</a></p>
+  </section>
+
+  <section class="home-section" aria-labelledby="latest-label" data-latest-posts>
+    <div class="section-head">
+      <h2 class="section-label" id="latest-label">Latest writing</h2>
+      <a href="/blog/" data-all-posts>All posts →</a>
+    </div>
+    <p data-fallback><a href="/blog/ko/" lang="ko">한국어로 읽기</a> · <a href="/blog/en/">Read in English</a></p>
+  </section>
+
+  <section class="home-section" aria-labelledby="archive-label">
+    <div class="section-head">
+      <h2 class="section-label" id="archive-label">Academic archive · 2017–2023</h2>
+      <a href="/academic.html">Browse the archive →</a>
+    </div>
+    <p class="section-note">Papers, notes, and course materials from graduate school, kept at their original addresses.</p>
+    <ul class="link-list">
+      <li><a href="/research.html">Research</a><p>Publications, preprints, talks, and software.</p></li>
+      <li><a href="/notes.html">Notes</a><p>Lecture notes, qualifier solutions, seminar notes, and essays.</p></li>
+      <li><a href="/teaching.html">Teaching</a><p>Course pages for MATH 142 and MATH 167.</p></li>
+      <li><a href="/travel.html">Travel</a><p>Conferences and workshops, 2016–2020.</p></li>
+    </ul>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>© Byeongsu Yu · <a href="https://www.linkedin.com/in/byeongsu-yu/" rel="me">LinkedIn</a> · <a href="https://github.com/byeongsuyu" rel="me">GitHub</a></p>
+</footer>
+</body>
+</html>
