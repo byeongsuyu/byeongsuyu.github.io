@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <clipPath id="tile"><rect width="64" height="64" rx="12"/></clipPath>
+  <g clip-path="url(#tile)">
+    <rect width="64" height="64" fill="#804263"/>
+    <rect width="64" height="9" fill="#956979"/>
+  </g>
+  <text x="32" y="52" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="44" font-weight="700" fill="#fff7fc">B</text>
+</svg>
