@@ -1,98 +1,172 @@
-body { -webkit-text-size-adjust:100% }
-.outerframe { margin-top:min(5vw,45px);margin-left:min(2vw,30px);padding-bottom:min(5vw,100px);width:100vw;font-size:15px;font-weight:400;line-height:119%;color:#101010;font-family:arial }
-.menuframe { float:left;padding-bottom:min(2vw,30px); }
-.iframepage {font-family:arial}
+/* Shared styles for the main site.
+   Colors, type, and header/footer metrics mirror /blog/site.css, so moving
+   between home, the academic archive, and the blog reads as one site.
+   The blog is generated elsewhere; if its look changes, update the tokens here by hand. */
 
-.name { margin-bottom:15px;width:min(60vw,200px); }
-a.name { font-weight:700;font-size:110%;text-decoration:none;color:#101010 }
-a.name:hover { text-decoration:none }
+@font-face{font-family:'Maru Buri';src:url('/blog/fonts/MaruBuri-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Maru Buri';src:url('/blog/fonts/MaruBuri-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 
-a { color:#888888 }
+:root{
+  color-scheme:light;
+  --paper:#e8e0e5;
+  --paper-deep:#ddd0d9;
+  --paper-soft:#ede6eb;
+  --ink:#38352f;
+  --muted:#665761;
+  --rule:#baaab3;
+  --rule-soft:#c9bac3;
+  --plum:#804263;
+  --plum-ink:#60304b;
+  --rose:#956979;
+  --band-edge:#b89eac;
+  --on-plum:#fff7fc;
+  --on-plum-muted:#f2e4ed;
+  --serif:'Maru Buri',Georgia,'AppleMyungjo','Batang',serif;
+  --sans:system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-family:var(--serif);
+  font-size:18px;
+  color:var(--ink);
+  background:var(--paper);
+  -webkit-text-size-adjust:100%;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--paper)}
+a{color:var(--plum);text-decoration-thickness:1px;text-underline-offset:5px}
+a:focus-visible{outline:3px solid var(--rose);outline-offset:4px}
+h1,h2,h3{word-break:keep-all;text-wrap:balance}
+/* Maru Buri's Latin space is only 0.28em, so words (and links) run together in English.
+   Widen it for serif text, as the blog does for its English prose; sans text keeps its own. */
+html[lang=en] body{word-spacing:.1em}
+[lang=ko],.site-nav,.eyebrow,.section-label,.section-head a,.posts time,.entry-meta,.tag,.sublinks,.quick,.records .small,.legacy .week,.legacy .date,.skip-link{word-spacing:normal}
+p{line-height:1.72}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:10;padding:10px 14px;background:var(--paper);font:14px/1.4 var(--sans)}
+.skip-link:focus{top:12px}
 
-.menumainlinkframe { float:left;margin-top:0px;line-height:;width:min(40vw,135px);left:0px;font-size:;color:#bb0000 }
-a.menumainlink { text-decoration:none;font-size:95%;font-weight:700;color:#bb0000 }
-a.menumainlink:hover { text-decoration: underline }
+/* Header band: same height, colors, and column as the blog's header. */
+.site-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 28px;width:100%;margin:0 0 52px;padding:25px max(26px,calc((100% - 760px)/2));min-height:98px;background:var(--plum);border-top:9px solid var(--rose);border-bottom:5px solid var(--band-edge);color:var(--on-plum)}
+.site-identity{flex:1 1 220px;min-width:0}
+.brand{display:inline-block;font-size:22px;font-weight:700;letter-spacing:-.02em;color:inherit;text-decoration:none;white-space:nowrap}
+.site-tagline{margin:8px 0 0;font-size:14px;line-height:1.6;color:var(--on-plum);opacity:.9}
+.site-nav{display:flex;flex:0 0 auto;gap:22px;font:14px/1.4 var(--sans)}
+.site-nav a{padding:8px 0;color:var(--on-plum-muted);text-decoration:none;border-bottom:1px solid transparent}
+.site-nav a:hover{color:#fff;border-bottom-color:var(--on-plum-muted)}
+.site-nav a[aria-current]{color:#fff;border-bottom-color:#fff}
+.site-nav a:focus-visible,.brand:focus-visible{outline-color:var(--on-plum)}
 
-.externallinkframe { float:left;margin-top:0px;width:min(50vw,230px)}
-a.externallinkframe { text-decoration:none;font-size:95%;color:#888888 }
-a.externallinkframe:hover { text-decoration:underline }
+main{flex:1;width:100%;max-width:820px;margin:0 auto;padding:0 30px}
 
-.right_contact { float:left;margin-top:0px;width:min(56vw,380px) }
-a.right_contact { text-decoration:none;font-size:95%;color:#888888 }
-a.right_contact:hover { text-decoration: underline }
+.site-footer{width:100%;margin-top:64px;padding:35px max(26px,calc((100% - 760px)/2)) 44px;min-height:132px;background:var(--plum);border-top:12px solid var(--rose);color:#f8edf4;font-size:14px;line-height:1.7}
+.site-footer p{margin:0;line-height:1.7}
+.site-footer a{color:inherit;text-underline-offset:4px}
 
-.titlesmall { position:;top:0px;left:0px;font-style:;font-size:100%;font-weight:700;color:#111111;padding-bottom:0px }
-.titlelarge { position:;top:0px;left:0px;font-style:;font-size:120%;font-weight:400;color:#111111;padding-bottom:23px }
-.titlesubtext { font-size:;font-weight:400;font-size:95%;color:#666666 }
+/* Page furniture shared by every page. */
+h1{font-size:2.45rem;font-weight:700;line-height:1.3;letter-spacing:-.035em;margin:0 0 20px}
+.eyebrow,.section-label{font:12px/1.6 var(--sans);letter-spacing:.09em;color:var(--muted);margin:0 0 22px;font-weight:400}
+.eyebrow{color:var(--plum);margin-bottom:12px}
+.eyebrow a{color:inherit;text-decoration:none}
+.eyebrow a:hover{text-decoration:underline}
+.page-header{margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--rule)}
+.page-header h1{margin:10px 0 14px}
+.page-header p{margin:0}
+.archive-note{font-size:.95rem;color:var(--muted);line-height:1.65}
+.lead{font-size:1.05rem}
+.page-header .header-links{margin-top:14px;font:14px/1.6 var(--sans)}
 
-a.boldlink { font-weight:700;color:#111111;text-decoration:none }
-a.boldlink:hover { color:#888888 }
+.content h2{font-size:1.22rem;font-weight:700;line-height:1.5;margin:48px 0 8px;padding-left:14px;border-left:3px solid var(--plum)}
+.content h2:first-child{margin-top:0}
 
-.contact { color:#707070;font-size:95%;padding-bottom:30px }
+/* Home */
+.intro{margin-bottom:56px}
+.intro p{font-size:1.1rem;line-height:1.75;margin:0 0 .8em}
+.intro p:last-child{margin-bottom:0}
+.intro .profile-link{margin-top:14px;font:13px/1.6 var(--sans)}
+.intro .profile-link a{text-decoration:none}
+.intro .profile-link a:hover{text-decoration:underline}
+.home-section{margin-bottom:56px}
+.section-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;margin-bottom:22px}
+.section-head .section-label{margin:0;white-space:nowrap}
+.section-head a{font:13px/1.6 var(--sans);text-decoration:none;white-space:nowrap}
+.section-head a:hover{text-decoration:underline}
+.section-note{margin:-10px 0 24px;font-size:.95rem;color:var(--muted);line-height:1.65}
 
-.mainbody { clear:left;margin-left:min(2vw,25px);width:min(100vw,680px);border-top:0px solid #cccccc;font-weight:400;color:#292929;padding-bottom:0px }
-.textframe { line-height:;position:;top:5px;padding-bottom:50px;left:200px;font-weight:400;color:#292929 }
-.textframeintro { line-height:;position:;top:5px;padding-bottom:23px;left:200px;font-weight:400;color:#292929 }
-.listing { line-height:20px;padding-bottom:11px;color:;font-style:}
-.paper { color:#444444;padding-bottom:12px }
-.date { font-weight:400;color:#999999  }
-a.textlink { text-decoration:none; border-bottom: 1px dotted #bbbbbb;font-size:100%;font-weight:400;font-style:normal;color:#101010 }
-a.textlink:hover { text-decoration: none; color:; border-bottom: 1px solid #444444;}
-.nolink { font-weight:400;font-style:normal;color:#101010 }
-  
-.paper { font-weight:400;color:#888888;padding-bottom:10px }
-.papertitle { font-weight:400;color:#303030 }
-a.paperlink { color:#888888;border-bottom:0px dotted;text-decoration:none }
-a.paperlink:hover { text-decoration:none;color:#252525 }
-a.coauthor { color:#888888;text-decoration:none;border-bottom:1px dotted #bbbbbb}
-a.coauthor:hover { text-decoration:none;color:#252525 }
+.posts{list-style:none;padding:0;margin:0}
+.posts li{padding:22px 0;border-bottom:1px solid var(--rule)}
+.posts li:first-child{padding-top:0}
+.posts time{font:12px/1.8 var(--sans);color:var(--muted)}
+.posts h3{margin:8px 0;font-size:1.4rem;font-weight:400;line-height:1.5}
+.posts h3 a{text-decoration:none}
+.posts h3 a:hover{text-decoration:underline}
+.posts p{margin:0;font-size:.95rem;line-height:1.65;color:var(--muted)}
 
-.table { padding-bottom:15px;padding-top:0px;border-spacing: 0px 0px;font-size:100% }
-.tabletextframe { position:;top:15px;left:0px;font-size:100%;font-weight:400;color:#353535;padding-top:5px }
-.tabletitlesmall { font-style:;font-size:100%;font-weight:400;color:#111111;padding-top:3px }
-.tabletitlelarge { font-style:;font-size:120%;font-weight:400;color:#111111;padding-bottom:15px;padding-top:2px }
+.link-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px 32px}
+.link-list li{padding-left:20px;border-left:2px solid var(--plum)}
+.link-list a{font-size:1.15rem;text-decoration:none}
+.link-list a:hover{text-decoration:underline}
+.link-list p{margin:4px 0 0;font-size:.9rem;line-height:1.6;color:var(--muted)}
+.link-list .quick{margin-top:8px;font:13px/1.7 var(--sans)}
+.link-list .quick a{font-size:inherit;text-decoration:underline;text-underline-offset:3px;color:var(--muted)}
+.link-list .quick a:hover{color:var(--plum)}
+.link-list.roomy{gap:36px 40px}
 
-.innertable { font-weight:400;color:#303030;padding-top:0px;font-size:100%;width:min(100vw,680px); }
-.term { width:min(13vw,90px);padding-right:10px;font-size:100%;color:#888888;font-style:italic }
-.coursenumber { font-size:100%;font-weight:400; width:min(13vw,90px);color:#303030;padding-right:10px }
-.role { width:min(15vw,100px);padding-right:10px;font-size:100%;color:#888888;font-style:italic }
-.week { width:min(11vw,70px);padding-right:15px;font-size:100%;color:#303030 }
-.date { width:min(13vw,90px);padding-right:15px;font-size:100%;color:#888888;font-style:italic }
-.section { width:min(33vw,220px);padding-right:15px;font-size:100%;color:#303030 }
-.conference { font-size:100%;font-weight:400; width:min(39vw,265px);color:#303030;padding-right:10px }
-.location { font-size:100%;font-weight:400; width:min(40vw,300px);color:#303030 }
-.courses { text-decoration:none; width:min(40vw,300px);overflow:visible; }
-a.conference { color:#303030;text-decoration:none }
-a.conference:hover { text-decoration:underline }
-td { vertical-align:top }
-/*table.conference td { font-size:100%;font-weight:400; width:100px;color:#303030;padding-right:10px }
-table.date td { width:100px;padding-right:15px;font-size:100%;color:#888888;font-style:italic }
-table.location td { font-size:100%;font-weight:400; width:265px;color:#303030 }*/
+/* Archive entries: papers, notes, seminars. */
+.entries{list-style:none;padding:0;margin:0 0 8px}
+.entries>li{padding:16px 0;border-bottom:1px solid var(--rule)}
+.entry-title{margin:0;font-size:1.05rem;line-height:1.55}
+.entry-title a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:5px}
+.entry-title a:hover{color:var(--plum);text-decoration-color:var(--plum)}
+.entry-meta{margin:4px 0 0;font:14px/1.6 var(--sans);color:var(--muted)}
+.entry-meta a{color:var(--muted);text-underline-offset:3px}
+.entry-meta a:hover{color:var(--plum)}
+.tag{margin-left:8px;padding:1px 6px;border:1px solid var(--rule);border-radius:3px;font:11px/1.5 var(--sans);letter-spacing:.06em;color:var(--muted);vertical-align:2px}
+.sublinks{margin:8px 0 0;padding-left:1.2em;font:14px/1.6 var(--sans)}
+.sublinks li{margin:2px 0}
 
-.cw { padding-bottom:10px;font-size:;color:#666666 }
-.cwyear { color:#111111;font-weight:700 }
-a.cwlink { color:#666666;text-decoration:none }
-a.cwlink:hover { text-decoration:underline }
-a.subtext { text-decoration:none;font-style:;font-weight:400;font-size:95%;color:#777777 }
-a.subtext:hover { text-decoration:underline }
+/* Tables: teaching history and conferences. */
+.records{width:100%;border-collapse:collapse;font-size:.92rem;line-height:1.5;border-top:2px solid var(--plum);border-bottom:1px solid var(--plum)}
+.records th,.records td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule-soft)}
+.records th{font-weight:700;background:var(--paper-deep);color:var(--plum-ink)}
+.records tbody tr:nth-child(even){background:var(--paper-soft)}
+.records .small{font:13px/1.6 var(--sans);color:var(--muted);white-space:nowrap}
+.records a{text-decoration:none}
+.records a:hover{text-decoration:underline}
 
-.yearframe { margin-bottom: 20px }
-.year { margin-bottom:10px;font-weight:700;font-size:115%;color:#101010 }
+/* Legacy pages (course pages, seminar pages) keep their original markup.
+   These rules restyle the old class names without editing the content. */
+.legacy .iframepage{font-family:inherit}
+.legacy .titlelarge{float:none!important;width:auto!important;margin:0 0 16px;padding:0;font-size:1.9rem;font-weight:700;line-height:1.35;letter-spacing:-.03em;color:var(--ink)}
+.legacy .textframe,.legacy .textframeintro{line-height:1.95;margin:0 0 32px;color:var(--ink)}
+.legacy .innertable{width:100%;margin:8px 0 32px;border-collapse:collapse;font-size:.92rem;line-height:1.5;border-top:2px solid var(--plum);border-bottom:1px solid var(--plum)}
+.legacy .innertable td{padding:10px 12px 10px 0;vertical-align:top;border-bottom:1px solid var(--rule-soft)}
+.legacy .innertable tr:nth-child(even){background:var(--paper-soft)}
+.legacy .week,.legacy .date{font:13px/1.6 var(--sans);color:var(--muted);white-space:nowrap;padding-left:8px!important}
+.legacy h2{font-size:1.5rem;font-weight:700;line-height:1.4;letter-spacing:-.02em;margin:0 0 16px}
+.legacy h2~h2{margin-top:48px}
+.legacy h3{font-size:1.1rem;font-weight:700;margin:32px 0 8px}
+.legacy ul{padding-left:1.3em;margin:0 0 24px}
+.legacy li{margin:.35em 0;line-height:1.65}
+.legacy .unavailable{color:var(--muted)}
+.archive-footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--rule);font-size:.9rem;color:var(--muted);line-height:1.65}
 
-.archive { font-size:95%;color:#888888 }
-a.archivelink { text-decoration:none;font-size:95%;color:#888888 }
-a.menulink1:hover { text-decoration:underline }
-
-.pages { color:#101010;font-weight: 400; line-height: 18px; text-align: left; }
-a.pages { text-decoration: none }
-a.pages:hover { color: #929292; }
-
-.date2 { font-weight:400;color:#888888;font-style:;padding-top:2px }
-a.cv { text-decoration:none; border-bottom: 1px dotted #666666;font-size:100%;font-weight:400;color:#a00000 }
-a.cv:hover { text-decoration: none; color:; border-bottom: 1px solid #a00000;}
-
-a.booklink { text-decoration:none; border-bottom: 0px dotted #bbbbbb;font-size:100%;font-weight:400;font-style:normal;color:#101010 }
-a.booklink:hover { text-decoration: none; color:#888888; border-bottom: 0px solid #444444;}
-
-.textquote { clear:both;float:left;margin-left:0px;width:200px;font-weight:400;font-size:85%;font-style:italic;color:#444444;padding-bottom:30px }
-.textfooter { clear:both;float:left;margin-left:225px;width:680px;font-weight:400;font-size:95%;color:#888888;padding-bottom:30px }
+@media(max-width:600px){
+  :root{font-size:17px}
+  .site-header{margin-bottom:32px;padding:18px 22px;min-height:82px;align-items:flex-start;flex-wrap:nowrap;gap:16px}
+  .brand{font-size:19px}
+  .site-tagline{font-size:12px;margin-top:4px}
+  .site-nav{gap:16px;font-size:14px}
+  .site-nav a{padding:3px 0}
+  main{padding:0 22px}
+  h1{font-size:1.95rem}
+  .legacy .titlelarge{font-size:1.55rem}
+  .page-header{margin-bottom:28px;padding-bottom:18px}
+  .intro p{font-size:1.02rem}
+  .posts h3{font-size:1.2rem}
+  .records thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .records tr{display:block;padding:12px 4px;border-bottom:1px solid var(--rule-soft)}
+  .records td{display:block;padding:1px 0;border:0}
+  .legacy .innertable tr{display:block;padding:10px 0;border-bottom:1px solid var(--rule-soft)}
+  .legacy .innertable td{display:block;width:auto!important;padding:1px 8px!important;border:0}
+  .legacy .innertable td.week,.legacy .innertable td.date{display:inline-block;padding-right:4px!important}
+  .site-footer{margin-top:48px;padding:28px 22px 36px}
+}
+@media(prefers-reduced-motion:no-preference){a{transition:color .12s,background .12s,border-color .12s}}
